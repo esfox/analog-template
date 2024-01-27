@@ -4,6 +4,6 @@ export const load = async () => {
     setTimeout(() => resolve(), 3000);
   });
   return {
-    message: 'Hello World',
+    message: 'Hello About',
   };
 };
