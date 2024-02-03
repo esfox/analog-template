@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { RouterLink } from '@angular/router';
+import { MainLayoutComponent } from '@app/layouts/main-layout/main-layout.component';
 import { ButtonModule } from 'primeng/button';
-import { MainLayoutComponent } from '../layouts/main-layout/main-layout.component';
 
 @Component({
   selector: 'app-home',

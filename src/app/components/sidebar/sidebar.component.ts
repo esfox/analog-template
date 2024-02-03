@@ -18,7 +18,7 @@ export class SidebarComponent {
     {
       label: 'Users',
       icon: 'fa fa-users',
-      link: '/about',
+      link: '/users',
     },
     {
       label: 'Roles',
