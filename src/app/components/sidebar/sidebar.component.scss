@@ -1,0 +1,12 @@
+:host {
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+  height: 100%;
+}
+
+::ng-deep {
+  .sidebar-menu .p-menu {
+    width: 100%;
+    border: none;
+  }
+}

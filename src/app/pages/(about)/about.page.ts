@@ -3,12 +3,13 @@ import { Component } from '@angular/core';
 import { toSignal } from '@angular/core/rxjs-interop';
 import { RouterLink } from '@angular/router';
 import { ButtonModule } from 'primeng/button';
+import { MainLayoutComponent } from '../../layouts/main-layout/main-layout.component';
 import { load } from './about.server';
 
 @Component({
   selector: 'app-about',
   standalone: true,
-  imports: [RouterLink, ButtonModule],
+  imports: [RouterLink, ButtonModule, MainLayoutComponent],
   templateUrl: './about.page.html',
 })
 export default class AboutPageComponent {

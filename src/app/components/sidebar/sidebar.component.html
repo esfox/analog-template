@@ -1,0 +1,24 @@
+<aside class="h-full w-64">
+  <h1 class="text-center font-semibold text-2xl text-white py-4 bg-primary">
+    Admin
+  </h1>
+  <ul>
+    @for (item of menuItems; track $index) {
+      <a
+        role="link"
+        routerLinkActive="group active"
+        [routerLink]="item.link"
+        [routerLinkActiveOptions]="{ exact: item.link === '/' }"
+      >
+        <li
+          class="p-3 text-[var(--text-color)] group-[.active]:bg-[var(--primary-700)] group-[.active]:text-white"
+        >
+          @if (item.icon) {
+            <i class="text-center w-5 mr-1" [class]="item.icon"></i>
+          }
+          {{ item.label }}
+        </li>
+      </a>
+    }
+  </ul>
+</aside>
