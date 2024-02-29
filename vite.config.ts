@@ -4,7 +4,7 @@ import { defineConfig } from 'vite';
 import analog from '@analogjs/platform';
 import { resolve } from 'path';
 
-const pathAliases = ['app'];
+const pathAliases = ['app', 'database'];
 
 // https://vitejs.dev/config/
 export default defineConfig(({ mode }) => ({
@@ -19,7 +19,11 @@ export default defineConfig(({ mode }) => ({
       replacement: resolve(__dirname, `src/${alias}`),
     })),
   },
-  plugins: [analog()],
+  plugins: [
+    analog({
+      apiPrefix: 'api',
+    }),
+  ],
   test: {
     globals: true,
     environment: 'jsdom',
